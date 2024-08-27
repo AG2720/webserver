@@ -11,9 +11,9 @@ Total points: xx/165
 **Add link to further documentation/folder in repo**
 
 - [x] **Exercise set 1**
-  - [x] Task 1: 2/2 points - Works as expected
-  - [x] Task 2: 3/4 pistettä - Partially correct, did not implement the function correctly
-  - [~] Task 3: 0/4 points - Did not have time  
+    - [x] Task 1: 2/2 points - Works as expected
+    - [x] Task 2: 3/4 pistettä - Partially correct, did not implement the function correctly
+    - [~] Task 3: 0/4 points - Did not have time  
 
 Total 5/10
 
@@ -22,9 +22,9 @@ Total 5/10
 **Add link to further documentation/folder in repo**
 
 - [x] **Exercise set 2**
-  - [x] Task 1: 2/2 points - Works as expected
-  - [x] Task 2: 4/4 points - Works as expected
-  - [x] Task 3: 4/4 points - Works as expected
+    - [x] Task 1: 2/2 points - Works as expected
+    - [x] Task 2: 4/4 points - Works as expected
+    - [x] Task 3: 4/4 points - Works as expected
 
 Total 10/10
 
