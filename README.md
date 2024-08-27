@@ -32,8 +32,8 @@ Total 10/10
 
 ------------------
 
-**Add link to further documentation/folder in repo**
-
 ### Exercise set 3
+
+**Add link to further documentation/folder in repo**
 
 ....
