@@ -1,31 +1,33 @@
-# Harjoitustehtäväpäiväkirja
+# Exercise diary
 
-Täydennä tätä tiedostoa harjoitustehtävien tekemisen yhteydessä.
+This file is used to track the total completion of the exercises. The file is should be updated after completing each exercise. 
 
-Kokonaispisteet: xx/xx
-Kokonaisprosentti: xx%
+NOTICE: There are separate return boxes in Moodle for exercises 1-5 and 6-10.
+
+Total points: xx/165
 
 -----------------
 
-Harjoitukset 1
+Exercise set 1
 
-Tehtävä 1: 2/2 pistettä - Toimii tehtävänannon mukaisesti
+Task 1: 2/2 points - Works as expected
+Task 2: 3/4 pistettä - Partially correct, did not implement the function correctly
+Task 3: 0/4 points - Did not have time  
 
-Tehtävä 2: 3/4 pistettä - Toimii osittain, tähän lyhyesti puutteet
-
-Tehtävä 3: 0/4 pistettä - Ei palautettu
-
-Yhteensä 5/10
+Total 5/10
 
 ------------------
 
-Harjoitukset 2
+Exercise set 2
 
-Tehtävä 1: 2/2 pistettä - Toimii tehtävänannon mukaisesti
+Task 1: 2/2 points - Works as expected
+Task 2: 4/4 points - Works as expected
+Task 3: 4/4 points - Works as expected
 
-Tehtävä 2: 2/2 pistettä - Toimii tehtävänannon mukaisesti
+Total 10/10
 
-...
+------------------
 
-Yhteensä 10/10
+Exercise set 3
 
+....
