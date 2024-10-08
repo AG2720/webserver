@@ -20,7 +20,7 @@ Total 5/10
 
 ------------------
 
-### Exercise set 2
+### Exercise set 2hh
 
 **Add link to further documentation/folder in repo**
 

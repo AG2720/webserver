@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Information</title>
+</head>
+<body>
+  <h1>System Information</h1>
+  <div id="info"></div>
+  <script>
+
+    async function fetchData() {
+      try {
+        const response = await fetch('/data');
+        const data = await response.json();
+
+        const infoDiv = document.getElementById('info');
+        infoDiv.innerHTML = `<p>Uptime: ${data.uptime}</p><p>Total Memory: ${data.totalMemory}</p>`;
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    }
+    fetchData();
+  </script>
+</body>
+</html>

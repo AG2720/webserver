@@ -1,0 +1,11 @@
+POST http://localhost:3000/albums
+Content-Type: application/json
+
+{
+    "artist": "Lady Gaga",
+    "title": "Bad romance",
+    "year": 2005,
+    "genre": "pop",
+    "tracks": 13
+}
+
