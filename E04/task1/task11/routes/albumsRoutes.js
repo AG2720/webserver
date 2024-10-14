@@ -1,6 +1,6 @@
 const express = require('express');
-const albumsController = require('../controllers/albumsController');
-const checkUserQuery = require('../middlewares/authMiddleware');
+const albumsController = require('../controllers/albumsController.js');
+const checkUserQuery = require('../middlewares/authMiddleware.js');
 
 const router = express.Router();
 

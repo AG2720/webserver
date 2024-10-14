@@ -1,5 +1,5 @@
 const express = require('express');
-const connectDB = require('./db');
+const connectDB = require('./db.mjs');
 //const albumsRoutes = require('./routes/albumsRoutes');
 //const path = require('path');
 
@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json()); //middleware for json
 
 //app.use(express.static(path.join(__dirname, 'public')));
-const albumsRoutes = require('./routes/albumsRoutes');
+const albumsRoutes = require('./routes/albumsRoutes.js');
 
 app.get('/', (req, res) => {
     res.send('Album');
