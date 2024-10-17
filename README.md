@@ -4,36 +4,72 @@ This file is used to track the total completion of the exercises. The file shoul
 
 NOTICE: There are separate return boxes in Moodle for exercises 1-5 and 6-10.
 
-**Total points: xx/165**
+**Total points: 76/165**
 
 ------------------
 
 ### Exercise set 1
 
-**Add link to further documentation/folder in repo**
-
-- [x] Task 1: 2/2 points - Works as expected
-- [x] Task 2: 3/4 pistettä - Partially correct, did not implement the function correctly
-- [~] Task 3: 0/4 points - Did not have time  
-
-Total 5/10
-
-------------------
-
-### Exercise set 2hh
-
-**Add link to further documentation/folder in repo**
+**https://gitlab.labranet.jamk.fi/ttc8430/3005/wsp-exercises-AG2720/-/tree/main/E01?ref_type=heads**
 
 - [x] Task 1: 2/2 points - Works as expected
 - [x] Task 2: 4/4 points - Works as expected
-- [x] Task 3: 4/4 points - Works as expected
+- [x] Task 3: 4/4 points - Works as expected  
 
 Total 10/10
 
 ------------------
 
+### Exercise set 2
+
+**https://gitlab.labranet.jamk.fi/ttc8430/3005/wsp-exercises-AG2720/-/tree/main/E02?ref_type=heads**
+
+- [x] Task 1: 4/4 points - Works as expected
+- [x] Task 2: 4/4 points - Works as expected
+- [x] Task 3: 3/3 points - Works as expected
+- [x] Task 4: 4/4 points - Works as expected
+
+Total 15/15
+
+------------------
+
 ### Exercise set 3
 
-**Add link to further documentation/folder in repo**
+**https://gitlab.labranet.jamk.fi/ttc8430/3005/wsp-exercises-AG2720/-/tree/main/E03?ref_type=heads**
 
-....
+
+- [x] Task 1: 1/1 points - Works as expected
+- [x] Task 2: 2/2 points - Works as expected
+- [x] Task 3: 5/5 points - Works as expected
+- [x] Task 4: 7/7 points - Works as expected
+
+Total 15/15
+
+------------------
+
+### Exercise set 4
+**https://gitlab.labranet.jamk.fi/ttc8430/3005/wsp-exercises-AG2720/-/tree/main/E04?ref_type=heads**
+
+- [x] Task 1: 2/3 points - I fixed the errors, I'm not sure that everything is right
+- [x] Task 2: 5/5 points - Works as expected
+- [x] Task 3: 4/4 points - Works as expected
+- [x] Task 4: 4/4 points - Works as expected
+- [x] Task 5: 4/4 points - Works as expected
+
+Total 19/20
+
+------------------
+
+### Exercise set 5
+**https://gitlab.labranet.jamk.fi/ttc8430/3005/wsp-exercises-AG2720/-/tree/main/E05?ref_type=heads**
+
+- [x] Task 1: 2/2 points - Works as expected
+- [x] Task 2: 2/2 points - Works as expected
+- [x] Task 3: 4/4 points - Works as expected
+- [x] Task 4: 3/3 points - Works as expected
+- [x] Task 5: 3/3 points - Works as expected
+- [x] Task 6: 3/3 points - Works as expected
+
+Total 17/17
+
+------------------

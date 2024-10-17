@@ -3,7 +3,7 @@
 
 //GET http://localhost:3000/api/albums?artist=tot
 
-//GET http://localhost:3000/api/albums?fields=artist,title&minYear=1980&maxYear=2000&sortBy=year&order=asc
+GET http://localhost:3000/api/albums?fields=artist,title&minYear=1980&maxYear=2000&sortBy=year&order=asc
 
 //GET http://localhost:3000/api/albums?fields=artist,title&minYear=1980&maxYear=2000&sortBy=year&order=asc
 
