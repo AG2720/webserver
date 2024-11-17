@@ -1,11 +1,11 @@
 //albumsController.js
 const Album = require('../models/Album.js');
-const APIError = require('../errors/apierror');
+const APIError = require('../errors/apierror.js');
 
 exports.getAllAlbums = async (req, res) => {
         const albums = await Album.find();
         res.json(albums); 
-};
+}; 
 
 exports.getAlbumById = async (req, res) => {
         const album = await Album.findById(req.params.id);
@@ -13,7 +13,7 @@ exports.getAlbumById = async (req, res) => {
             throw new APIError('Album not found', 404);
         }
         res.json(album);
-};
+}; 
 
 exports.createAlbum = async (req, res) => {
     const newAlbum = new Album({
@@ -41,7 +41,8 @@ exports.deleteAlbum = async (req, res) => {
         if (!deletedAlbum) {
             throw new APIError('Album not found', 404);
         }
-        res.status(204).send();
+
+        res.status(200).json({ message: 'Deleted successuflly' })
 };
 
 exports.getAlbums = async (req, res) => {

@@ -1,3 +1,4 @@
+//albumsRoutes.js
 const express = require('express');
 const albumsController = require('../controllers/albumsController.js');
 const checkUserQuery = require('../middlewares/authMiddleware.js');

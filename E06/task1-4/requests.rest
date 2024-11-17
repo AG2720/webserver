@@ -1,4 +1,4 @@
-//GET http://localhost:3000/api/albums?startYear=1970&endYear=1980&fields=artist,title&sortBy=year&order=asc
+GET http://localhost:3000/api/albums?startYear=1970&endYear=1980&fields=artist,title&sortBy=year&order=asc
 
 
 //GET http://localhost:3000/api/albums?artist=tot
@@ -20,9 +20,9 @@
  // "tracks": 10
 //}
 
-POST http://localhost:3000/api/albums
-Content-Type: application/json
+//POST http://localhost:3000/api/albums
+//Content-Type: application/json
 
-{
-  "artist": ""
-}
+//{
+//  "artist": ""
+//}
