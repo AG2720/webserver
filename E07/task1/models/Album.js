@@ -8,7 +8,7 @@ const albumSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: [3, 'Artist name must be at least 3 letters long'],
-        maxlength: [50, 'Artist name must be shorter that 50 letters']
+        maxlength: [50, 'Artist name must be shorter that 50 letters'],
     },
     title: {
         type: String,
@@ -39,6 +39,11 @@ const albumSchema = new mongoose.Schema({
     updatedAt: {
         type: Date,
         default: Date.now
+    },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     }
 });
 

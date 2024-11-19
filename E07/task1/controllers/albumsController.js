@@ -3,12 +3,12 @@ const Album = require('../models/Album.js');
 const APIError = require('../errors/apierror.js');
 
 exports.getAllAlbums = async (req, res) => {
-        const albums = await Album.find();
+        const albums = await Album.find().populate('owner', 'email role');
         res.json(albums); 
 }; 
 
 exports.getAlbumById = async (req, res) => {
-        const album = await Album.findById(req.params.id);
+        const album = await Album.findById(req.params.id).populate('owner', 'email role');
         if (!album) {
             throw new APIError('Album not found', 404);
         }
@@ -21,7 +21,8 @@ exports.createAlbum = async (req, res) => {
         title: req.body.title,
         year: req.body.year,
         genre: req.body.genre,
-        tracks: req.body.tracks
+        tracks: req.body.tracks,
+        owner: req.user.id
     });
     
     const savedAlbum = await newAlbum.save();
@@ -29,18 +30,25 @@ exports.createAlbum = async (req, res) => {
 };
 
 exports.updateAlbum = async (req, res) => {
-        const updatedAlbum = await Album.findByIdAndUpdate(req.params.id, req.body, { new : true });
-        if (!updatedAlbum) {
+        const album = await Album.findById(req.params.id);
+        if (!album) {
            throw new APIError('Album not found', 404);
         }
+
+        req.albumOwnerId = album.owner
+        Object.assign(album, req.body)
+        const updatedAlbum = await album.save()
         res.json(updatedAlbum);
 };
 
 exports.deleteAlbum = async (req, res) => {
-        const deletedAlbum = await Album.findByIdAndDelete(req.params.id);
-        if (!deletedAlbum) {
+        const album = await Album.findById(req.params.id);
+        if (!album) {
             throw new APIError('Album not found', 404);
         }
+
+        req.albumOwnerId = album.owner
+        await album.deleteOne()
 
         res.status(200).json({ message: 'Deleted successuflly' })
 };
