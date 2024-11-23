@@ -44,6 +44,57 @@ test('albums returned as json', async () => {
     expect(response.body).toHaveLength(testAlbums.length)
 })
 
+test('albums can be added successfully', async () => {
+    const newAlbum = {
+        artist: 'Taylor Swift',
+        title: 'Midnights',
+        year: 2022,
+        genre: 'Pop',
+        tracks: 13,
+    }
+
+    const postResponse = await agent
+        .post('/api/albums')
+        .send(newAlbum)
+        .expect(201)
+        .expect('Content-Type', /application\/json/)
+
+    expect(postResponse.body).toMatchObject(newAlbum)
+
+    const albumsInDb = await Album.find({})
+    expect(albumsInDb).toHaveLength(testAlbums.length +1)
+    expect(albumsInDb.some(album => album.title === newAlbum.title)).toBe(true)
+})
+
+test('successfully deletes an album', async () => {
+    const albumsInDbBefore = await Album.find({})
+    const albumToDelete = albumsInDbBefore[0]
+
+    await agent 
+        .delete(`/api/albums/${albumToDelete._id}`)
+        .expect(200)
+
+    const albumsInDbAfter = await Album.find({})
+    expect(albumsInDbAfter).toHaveLength(albumsInDbBefore.length -1)
+
+    const deletedAlbum = await Album.findById(albumToDelete._id)
+    expect(deletedAlbum).toBeNull()
+})
+
+test('attempt to delete a non-existent album', async () => {
+    const nonExistentId = new mongoose.Types.ObjectId()
+
+    const response = await agent
+        .delete(`/api/albums/${nonExistentId}`)
+        .expect(404)
+
+    console.log(response.body)
+
+    const albumsInDb = await Album.find({})
+    expect(albumsInDb).toHaveLength(testAlbums.length)
+})
+
+
 afterAll(async () => {
     await mongoose.connection.close()
 })

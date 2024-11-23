@@ -44,13 +44,13 @@ exports.updateAlbum = async (req, res) => {
 exports.deleteAlbum = async (req, res) => {
         const album = await Album.findById(req.params.id);
         if (!album) {
-            throw new APIError('Album not found', 404);
+           throw new APIError('Album not found', 404)
         }
 
         req.albumOwnerId = album.owner
         await album.deleteOne()
 
-        res.status(200).json({ message: 'Deleted successuflly' })
+        res.status(200).json({ message: 'Deleted successfully' })
 };
 
 exports.getAlbums = async (req, res) => {

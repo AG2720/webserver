@@ -4,6 +4,7 @@ const albumsController = require('../controllers/albumsController.js');
 const isAuthenticated = require('../middlewares/isAuthenticated.js');
 const { isAdmin, isOwnerOrAdmin } = require('../middlewares/checkRole.js');
 const User = require('../models/User.js');
+const Album = require('../models/Album.js');
 
 const router = express.Router();
 
@@ -19,7 +20,7 @@ router.delete('/admin/user/:id', isAuthenticated, isAdmin, async (req, res) => {
     const userId = req.params.id
     const user = await User.findByIdAndDelete(userId)
     if (!user) return res.status(404).json({ message: 'User not found' })
-    res.status(200).json({ message: 'User deleted by admin' })
+    res.status(200).end()
 })
 
 module.exports = router;
