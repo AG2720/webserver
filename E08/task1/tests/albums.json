@@ -1,0 +1,19 @@
+[
+    {
+      "artist": "Michael Buble",
+      "title": "Its time",
+      "year": 2020,
+      "genre": "Pop",
+      "tracks": 10,
+      "owner": "673dd827e000fd81b71f8219"
+    },
+    {
+      "artist": "sabrina Carpenter",
+      "title": "Short n sweet",
+      "year": 2018,
+      "genre": "Pop",
+      "tracks": 12,
+      "owner": "673dd827e000fd81b71f8219"
+    }
+  ]
+
