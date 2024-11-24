@@ -18,5 +18,3 @@ const fetchAlbums = async () => {
   }
 };
 fetchAlbums()
-
-//import axios from 'axios';

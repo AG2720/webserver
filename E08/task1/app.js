@@ -2,7 +2,7 @@
 require('dotenv').config()
 const express = require('express');
 const session = require('express-session')
-//const MongoDBStore = require('connect-mongo')
+const MongoDBStore = require('connect-mongo')
 const initializePassport = require('./passport-config')
 const connectDB = require('./db.js');
 const passport = require('passport')
@@ -27,6 +27,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI })
    }))
    
    

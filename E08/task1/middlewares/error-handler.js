@@ -1,6 +1,5 @@
 //error-handler.js
 const APIError = require('../errors/apierror')
-//const { StatusCodes } = require('http-status-codes')
 
 const errorHandlerMiddleware = (err, req, res, next) => {
   if (err instanceof APIError) {
