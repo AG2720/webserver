@@ -5,9 +5,9 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo');
 const passport = require('passport')
 
-const initializePassport = require('./passport-config')
+const initializePassport = require('./passport-config.js')
 const connectDB = require('./db.js');
-const config = require('./utils/config')
+const config = require('./utils/config.js')
 
 const albumsRoutes = require('./routes/albumsRoutes.js');
 const registerRoutes = require('./routes/register.js')
@@ -18,8 +18,8 @@ const notFoundMiddleware = require('./middlewares/not-found.js');
 
 const { ApolloServer } = require('@apollo/server')
 const { expressMiddleware } = require('@apollo/server/express4')
-const typeDefs = require('./graphql/schema')
-const resolvers = require('./graphql/resolvers')
+const typeDefs = require('./graphql/schema.js')
+const resolvers = require('./graphql/resolvers.js')
 
 require('express-async-errors');
 

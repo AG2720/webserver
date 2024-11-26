@@ -1,35 +1,39 @@
-const albums = [
-    { id: "1", artist: "Taylor Swift", title: "Album", year: 2010, genre: "Pop" },
-    { id: "1", artist: "Bon Jovi", title: "Album1", year: 1984, genre: "Rock" }
-]
+const Album = require('../models/Album')
 
 const resolvers = {
     Query: {
-        albums: () => albums,
-        album: (_, { id }) => albums.find((album) => album.id === id),
+        albums: async () => {
+            return await Album.find({})
+        },
+        album: async (_, { id }) => {
+            return await Album.findById(id)
+        }
     },
     Mutation: {
-        createAlbum: (_, { artist, title, year, genre }) => {
-            const newAlbum = { id: String(albums.length + 1), artist, title, year, genre }
-            albums.push(newAlbum)
-            return newAlbum
+        createAlbum: async (_, { artist, title, year, genre, tracks, owner }) => {
+           const newAlbum = new Album({
+                artist,
+                title,
+                year,
+                genre,
+                tracks,
+                owner
+           })
+
+           await newAlbum.save()
+           return newAlbum
         },
-        updateAlbum: (_, { id, artist, title, year, genre }) => {
-            const album = albums.find(album => album.id === id)
-            if (!album) return null
-            if (artist) album.artist = artist
-            if (title) album.title = title
-            if (year) album.year = year
-            if (genre) album.genre = genre
-
-            return album
+        updateAlbum: async (_, { id, artist, title, year, genre, tracks }) => {
+            const updatedAlbum = await Album.findByIdAndUpdate(
+                    id,
+                    { artist, title, year, genre, tracks },
+                    { new: true, runValidators: true }
+                )
+                return updatedAlbum
         }, 
-        deleteAlbum: (_, { id }) => {
-            const index = albums.findIndex(album => album.id === id)
-            if (index === -1) return false
-
-            albums.splice(index, 1)
-            return true
+        deleteAlbum: async (_, { id }) => {
+                const result = await Album.findByIdAndDelete(id)
+                return !!result
         }
     }
 }
