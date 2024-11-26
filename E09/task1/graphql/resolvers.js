@@ -10,14 +10,13 @@ const resolvers = {
         }
     },
     Mutation: {
-        createAlbum: async (_, { artist, title, year, genre, tracks, owner }) => {
+        createAlbum: async (_, { artist, title, year, genre, tracks }) => {
            const newAlbum = new Album({
                 artist,
                 title,
                 year,
                 genre,
                 tracks,
-                owner
            })
 
            await newAlbum.save()

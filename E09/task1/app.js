@@ -19,7 +19,8 @@ const notFoundMiddleware = require('./middlewares/not-found.js');
 const { ApolloServer } = require('@apollo/server')
 const { expressMiddleware } = require('@apollo/server/express4')
 const typeDefs = require('./graphql/schema.js')
-const resolvers = require('./graphql/resolvers.js')
+const resolvers = require('./graphql/resolvers.js');
+const { verify } = require('crypto');
 
 require('express-async-errors');
 
@@ -42,7 +43,10 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 async function startApolloServer() {
-    const apolloServer = new ApolloServer({ typeDefs, resolvers })
+    const apolloServer = new ApolloServer({ 
+        typeDefs, 
+        resolvers,
+    })
     await apolloServer.start()
     app.use('/graphql', expressMiddleware(apolloServer))
     
