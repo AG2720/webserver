@@ -1,0 +1,28 @@
+GET http://localhost:3000/api/albums?startYear=1970&endYear=1980&fields=artist,title&sortBy=year&order=asc
+
+
+//GET http://localhost:3000/api/albums?artist=tot
+
+//GET http://localhost:3000/api/albums?fields=artist,title&minYear=1980&maxYear=2000&sortBy=year&order=asc
+
+//GET http://localhost:3000/api/albums?fields=artist,title&minYear=1980&maxYear=2000&sortBy=year&order=asc
+
+
+
+//POST http://localhost:3000/api/albums/
+//Content-Type: application/json
+
+//{
+//  "artist": "Pink Floyd",
+//  "title": "Dark side of the moon",
+//  "year": 1973,
+ // "genre": "Rock",
+ // "tracks": 10
+//}
+
+//POST http://localhost:3000/api/albums
+//Content-Type: application/json
+
+//{
+//  "artist": ""
+//}

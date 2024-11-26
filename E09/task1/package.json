@@ -1,0 +1,44 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
+    "express-session": "^1.18.1",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-tools": "^9.0.4",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "description": "",
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
