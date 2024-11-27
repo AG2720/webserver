@@ -1,0 +1,28 @@
+{
+    "name": "postgres",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@apollo/server": "^4.11.2",
+        "apollo-datasource-rest": "^3.7.0",
+        "dotenv": "^16.0.1",
+        "express": "^4.17.1",
+        "express-async-errors": "^3.1.1",
+        "graphql": "^16.9.0",
+        "http-status-codes": "^2.2.0",
+        "pg": "^8.8.0",
+        "sequelize": "^6.25.7"
+    },
+    "devDependencies": {
+        "eslint": "^8.24.0",
+        "nodemon": "^3.0.1"
+    },
+    "description": ""
+}
