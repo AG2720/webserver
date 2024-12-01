@@ -1,0 +1,30 @@
+
+@hostname = localhost
+@port = {{$dotenv PORT}}
+@host = {{hostname}}:{{port}}
+@vehicle_id = {{create_vehicle.response.body.data.id}}
+
+### Get all
+GET http://{{host}}/api/vehicles/
+
+### Create
+# @name create_vehicle
+POST http://{{host}}/api/vehicles/
+Content-Type: application/json
+
+{
+  "type":"EV",
+  "make":"Hyundai",
+  "model":"Kona",
+  "commissioned": true,
+  "license_plate": "ABC-123"
+}
+
+### Get single
+GET http://{{host}}/api/vehicles/{{vehicle_id}}
+
+### Modify
+PUT http://{{host}}/api/vehicles/{{vehicle_id}}
+
+### Delete vehicle entry
+DELETE http://{{host}}/api/vehicles/{{vehicle_id}}
